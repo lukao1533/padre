@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Não Encontrado / Not Found</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="https://delivery.i-cdn.net/scripts/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="https://delivery.i-cdn.net/scripts/favicon-16x16.png" />
+    <link rel="shortcut icon" type="image/png" href="https://delivery.i-cdn.net/scripts/favicon-32x32.png" />
+
+    <script type="module" crossorigin src="https://strapcast.com/assets/index-DNIns1s7.js"></script>
+    <link rel="stylesheet" crossorigin href="https://strapcast.com/assets/index-C15lY7Zt.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <style>
+      body {
+        margin: 0;
+        background-color: #000;
+        color: #fff;
+        font-family: sans-serif;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+      }
+
+      img {
+        max-width: 200px;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        font-size: 2em;
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    
+      <img src="https://delivery.strapcast.com/strapcast/logo.png" alt="Logo" />
+      <h1>Não Encontrado / Not Found</h1>
+    
+  </body>
+</html>
+

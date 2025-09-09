@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<!--
+================================================================================
+                           DOCUMENTAÇÃO DO PROJETO
+================================================================================
+
+NOME DO PROJETO: Quaresma do Padre Pio
+
+INFORMAÇÕES TÉCNICAS:
+- Quaresma do Padre Pio (frontend)
+- Player de Vídeo: Strapcast
+- Plataforma de Vendas: PayT
+- VSL: 🏆 VSL VALIDADA - ENCURTADA SEM ML - [PAYT]
+
+NOTAS IMPORTANTES:
+- 
+- 
+- 
+
+LTIMA ATUALIZAÇÃO: [18/07/2024]
+VERSÃO: [VERSÃO]
+================================================================================
+-->
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    
+    <noscript>
+      <link rel="preload"
+            href="https://delivery.i-cdn.net/stream/vidAWcuodSAperc/ThumbnailStart.jpg"
+            as="image"
+            crossorigin="anonymous">
+    </noscript>
+    
+    <!-- ========================================================================== -->
+    <!-- TROCAR VDEO AQUI - SUBSTITUIR TODO O SCRIPT ABAIXO -->
+    <!-- ========================================================================== -->
+    <script type="text/javascript">
+        // CONFIGURAÇÃO DO VÍDEO PRINCIPAL
+        const VIDEO_ID      = 'vidAWcuodSAperc';
+        const CONTAINER_ID  = 'ctn_1753501662473';
+        const THUMB_URL     = `https://delivery.i-cdn.net/stream/${VIDEO_ID}/ThumbnailStart.jpg`;
+        const PLAYER_JS_URL = `https://delivery.i-cdn.net/stream/${VIDEO_ID}/player.js`;
+        
+        // Injeção imediata do preload (performance máxima)
+        let preloadLink = document.querySelector('link[rel="preload"][as="image"]');
+        if (!preloadLink) {
+          preloadLink = document.createElement('link');
+          preloadLink.rel         = 'preload';
+          preloadLink.as          = 'image';
+          preloadLink.crossOrigin = 'anonymous';
+          document.head.appendChild(preloadLink);
+        }
+        preloadLink.href = THUMB_URL;
+      </script>                   
+    <!-- ========================================================================== -->
+    <!-- FIM DA SEÇÃO DE TROCA DE VÍDEO -->
+    <!-- ========================================================================== -->
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Manuscrito Sagrado - Descoberta Religiosa">
+    <title>QUARESMA DO PADRE PIO</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/webp" href="./assets/images/geral/favicon.webp">
+    <link rel="shortcut icon" type="image/webp" href="./assets/images/geral/favicon.webp">
+    
+    <!-- Google Fonts - Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Critical CSS inline -->
+    <style>
+        /* Adicionar aqui os estilos críticos */
+        .header, .container, .footer { width: 100%; }
+        .video-container { position: relative; width: 100%; }
+        body {
+            background-image: url('./assets/images/plano-fundo/bg_1.webp');
+            background-attachment: fixed;
+            background-size: 110% auto;
+            background-position: center;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        @media (max-width: 768px) {
+            body {
+                background-attachment: scroll;
+                background-size: 120% auto;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+        @media (max-width: 480px) {
+            body {
+                background-size: 130% auto;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+        }
+    </style>
+    
+    <!-- DNS Prefetch para melhor performance -->  
+    <link rel="preload" as="image"  href="https://delivery.i-cdn.net/stream/vidAWcuodSAperc/ThumbnailStart.jpg" > 
+    <link rel="dns-prefetch" href="https://delivery.i-cdn.net">
+    <link rel="dns-prefetch" href="https://cdn-wftossaz9s.i-cdn.net">  
+    <link rel="dns-prefetch" href="https://m3u8.strapcast.com">
+    
+        <!-- Estilos não críticos -->
+    <link rel="stylesheet" href="./assets/css/style.min.css" media="print" onload="this.media='all'">
+    
+    <!-- Preconnect para domínios críticos -->
+    <link rel="preconnect" href="https://delivery.i-cdn.net" crossorigin>
+    <link rel="preconnect" href="https://cdn-wftossaz9s.i-cdn.net" crossorigin>
+    
+    <!-- Script Utmify -->
+    <script
+      src="https://cdn.utmify.com.br/scripts/utms/latest.js"
+      data-utmify-prevent-xcod-sck
+      data-utmify-prevent-subids
+      async
+      defer
+    ></script>
+
+
+
+
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <div class="logo">A12</div>
+            <div style="color: #1a237e;">PT</div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="headline">
+            <div class="live-counter" style="border: 1.5px solid #000; background-color: #FCC02E; padding: 4px 0; border-radius: 10px; max-width: 400px; width: 100%; margin: 8px auto 0 auto; box-sizing: border-box; font-size: 0.95rem; font-weight: bold; text-align: center;">
+                QUARESMA DO PADRE PIO
+            </div>
+        </div>
+        <style>
+            @media (max-width: 480px) {
+                .live-counter {
+                    font-size: 0.95rem !important;
+                }
+            }
+        </style>
+
+        <div class="video-container">
+            <div style="margin: 0px auto; width: 100%; max-width: 404px; margin-bottom: 20px;">
+                <h2 style="color: #000; font-size: 24px; font-family: 'Inter', sans-serif; font-weight: normal; text-align: center; line-height: 1.4; margin: 0; padding: 0 10px;">
+                    <strong>Hoje pode ser o dia da sua vitória</strong>: descubra como restaurar sua <strong>saúde</strong> e sua <strong>vida</strong>
+                </h2>
+            </div>
+            <div id="strap-player-container" style="margin: 0px auto;width: 100%;max-width: 404px;"> 
+                <div id="ctn_1753501662473" style="position: relative; width: 100%; padding: 125% 0px 0px;">
+                  <div id="vid_vidAWcuodSAperc" style="position: absolute;top: 0; left: 0; right: 0; bottom: 0; width: 100%; height: 100%;">
+                    <img id="thumb_vidAWcuodSAperc" src="https://delivery.i-cdn.net/stream/vidAWcuodSAperc/ThumbnailStart.jpg" async style="position: relative; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; display: block;" alt="thumbnail" />  
+                    <div id="backdrop_vidAWcuodSAperc"style=" -webkit-backdrop-filter: blur(5px); backdrop-filter: blur(5px); position: absolute; top: 0; height: 100%; width: 100%; "></div>
+                  </div> 
+                </div> 
+            </div>   
+            <script type="text/javascript" id="scr_vidAWcuodSAperc"> 
+              (function () {
+                var stpc = document.createElement("script"); stpc.async = !0, stpc.src = "https://delivery.i-cdn.net/stream/vidAWcuodSAperc/player.js", document.head.appendChild(stpc);
+              })();  
+            </script>
+        </div>
+        <div class="imagem-video-container">
+            <img class="lazyload" data-src="./assets/images/geral/imgvideo.webp" alt="Imagem do Vídeo" width="320" height="auto">
+        </div>
+
+        <!-- Comentários -->
+        <div class="comments-section">
+            <h3 style="margin-bottom: 1.5rem; font-size: 1.1rem;">Mostrando 18 de 322 comentários</h3>
+
+            <!-- Comentrio do Frei Gilson -->
+            <div class="comment">
+                <div class="comment-avatar">
+                    <img class="lazyload" data-src="./assets/images/comentarios/frei-gilson.webp" alt="Frei Gilson" width="48" height="48">
+                </div>
+                <div class="comment-content">
+                    <div class="comment-author">Frei Gilson</div>
+                    <div class="comment-text">A Quaresma do Padre Pio  uma das experiências espirituais mais fortes que já vivi. Quando comecei a praticar essas orações, percebi mudanças reais na minha vida e na vida das pessoas que oravam comigo. Se você está aqui, é porque seu anjo quer te mostrar esse caminho </div>
+                    <div class="comment-actions">
+                        <span class="like-button" onclick="toggleLike(this)">Curtir</span>
+                        <span>Responder</span>
+                        <span class="like-count">
+                            <img src="./assets/images/geral/fblike.webp" alt="like" width="16" height="16" loading="lazy" decoding="async">2.847
+                        </span>
+                        <span class="time-ago">4 h</span>
+                    </div>
+                    <div class="comment-replies">
+                        <div class="comment-reply">
+                            <div class="comment">
+                                <div class="comment-avatar">
+                                    <img class="lazyload" data-src="./assets/images/comentarios/maria-santos.webp" alt="Maria Santos" width="48" height="48">
+                                </div>
+                                <div class="comment-content">
+                                    <div class="comment-author">Maria Santos</div>
+                                    <div class="comment-text">@FreiGilson, eu comecei ontem e hoje acordei com uma paz que nunca tinha sentido. 🙌✨</div>
+                                    <div class="comment-actions">
+                                        <span class="like-button" onclick="toggleLike(this)">Curtir</span>
+                                        <span>Responder</span>
+                                        <span class="like-count">
+                                            <img src="./assets/images/geral/fblike.webp" alt="like" width="16" height="16">324
+                                        </span>
+                                        <span class="time-ago">2 h</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comentário do Fábio de Melo -->
+            <div class="comment">
+                <div class="comment-avatar">
+                    <img class="lazyload" data-src="./assets/images/comentarios/fabio-de-melo.webp" alt="Fábio de Melo" width="50" height="50">
+                </div>
+                <div class="comment-content">
+                    <div class="comment-author">Fábio de Melo</div>
+                    <div class="comment-text">Essa oração tocou meu coração de um jeito que não consigo explicar. Que mais pessoas tenham essa chance.  forte demais.</div>
+                    <div class="comment-actions">
+                        <span class="like-button" onclick="toggleLike(this)">Curtir</span>
+                        <span>Responder</span>
+                        <span class="like-count">
+                            <img src="./assets/images/geral/fblike.webp" alt="like">3.156
+                        </span>
+                        <span class="time-ago">3 h</span>
+                    </div>
+                    <div class="comment-replies">
+                        <div class="comment-reply">
+                            <div class="comment">
+                                <div class="comment-avatar">
+                                    <img class="lazyload" data-src="./assets/images/comentarios/carlos-henrique.webp" alt="Carlos Henrique" width="50" height="50">
+                                </div>
+                                <div class="comment-content">
+                                    <div class="comment-author">Carlos Henrique</div>
+                                    <div class="comment-text">@FabioDeMelo meu pai chorou ouvindo. Tava afastado de Deus há anos. Hoje ele rezou comigo 🙏</div>
+                                    <div class="comment-actions">
+                                        <span class="like-button" onclick="toggleLike(this)">Curtir</span>
+                                        <span>Responder</span>
+                                        <span class="like-count">
+                                            <img src="./assets/images/geral/fblike.webp" alt="like">412
+                                        </span>
+                                        <span class="time-ago">3 h</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comentário do Marcelo Rossi -->
+            <div class="comment">
+                <div class="comment-avatar">
+                    <img class="lazyload" data-src="./assets/images/comentarios/marcelo-rossi.webp" alt="Marcelo Rossi" width="50" height="50">
+                </div>
+                <div class="comment-content">
+                    <div class="comment-author">Marcelo Rossi</div>
+                    <div class="comment-text">Eu vivi o que está nesse vídeo. A Quaresma do Padre Pio não é só um livro, é um encontro real com Deus. Quem fizer com fé, vai sentir a mudança. Assista até o final e se permita viver essa experiência!</div>
+                    <div class="comment-actions">
+                        <span class="like-button" onclick="toggleLike(this)">Curtir</span>
+                        <span>Responder</span>
+                        <span class="like-count">
+                            <img src="./assets/images/geral/fblike.webp" alt="like">1.943
+                        </span>
+                        <span class="time-ago">1 d</span>
+                    </div>
+                    <div class="comment-replies">
+                        <div class="comment-reply">
+                            <div class="comment">
+                                <div class="comment-avatar">
+                                    <img class="lazyload" data-src="./assets/images/comentarios/gleicy.webp" alt="Gleicy" width="50" height="50">
+                                </div>
+                                <div class="comment-content">
+                                    <div class="comment-author">Gleicy</div>
+                                    <div class="comment-text">@MarceloRossi no final eu só conseguia chorar. É muito forte 😭 Obrigada por confirmar o que senti, padre!</div>
+                                    <div class="comment-actions">
+                                        <span class="like-button" onclick="toggleLike(this)">Curtir</span>
+                                        <span>Responder</span>
+                                        <span class="like-count">
+                                            <img src="./assets/images/geral/fblike.webp" alt="like">287
+                                        </span>
+                                        <span class="time-ago">21 h</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comentário do Reginaldo Manzotti -->
+            <div class="comment">
+                <div class="comment-avatar">
+                    <img class="lazyload" data-src="./assets/images/comentarios/reginaldo-manzotti.webp" alt="Reginaldo Manzotti" width="50" height="50">
+                </div>
+                <div class="comment-content">
+                    <div class="comment-author">Reginaldo Manzotti</div>
+                    <div class="comment-text">Essa oração reacendeu minha fé. A Quaresma do Padre Pio é mais do que uma devoão, é um presente direto do Céu. Se você está aqui, é porque essa bênço também é pra você. Receba com fé!</div>
+                    <div class="comment-actions">
+                        <span class="like-button" onclick="toggleLike(this)">Curtir</span>
+                        <span>Responder</span>
+                        <span class="like-count">
+                            <img src="./assets/images/geral/fblike.webp" alt="like">2.234
+                        </span>
+                        <span class="time-ago">21 h</span>
+                    </div>
+                    <div class="comment-replies">
+                        <div class="comment-reply">
+                            <div class="comment">
+                                <div class="comment-avatar">
+                                    <img class="lazyload" data-src="./assets/images/comentarios/ana-luiza.webp" alt="Ana Luiza" width="50" height="50">
+                                </div>
+                                <div class="comment-content">
+                                    <div class="comment-author">Ana Luiza</div>
+                                    <div class="comment-text">@ReginaldoManzotti comecei hj e já sinto meu coracao diferente 🙌</div>
+                                    <div class="comment-actions">
+                                        <span class="like-button" onclick="toggleLike(this)">Curtir</span>
+                                        <span>Responder</span>
+                                        <span class="like-count">
+                                            <img src="./assets/images/geral/fblike.webp" alt="like">351
+                                        </span>
+                                        <span class="time-ago">21 h</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <!-- Comentário do João Pedro -->
+            <div class="comment">
+                <div class="comment-avatar">
+                    <img class="lazyload" data-src="./assets/images/comentarios/joao-pedro.webp" alt="João Pedro" width="50" height="50">
+                </div>
+                <div class="comment-content">
+                    <div class="comment-author">João Pedro</div>
+                    <div class="comment-text">Comecei a oração e uma luz invadiu meu quarto, foi lindo! 🙏</div>
+                    <div class="comment-actions">
+                        <span class="like-button" onclick="toggleLike(this)">Curtir</span>
+                        <span>Responder</span>
+                        <span class="like-count">
+                            <img src="./assets/images/geral/fblike.webp" alt="like">389
+                        </span>
+                        <span class="time-ago">21 h</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comentário da Patrícia Lima -->
+            <div class="comment">
+                <div class="comment-avatar">
+                    <img class="lazyload" data-src="./assets/images/comentarios/patricia-lima.webp" alt="Patrícia Lima" width="50" height="50">
+                </div>
+                <div class="comment-content">
+                    <div class="comment-author">Patrícia Lima</div>
+                    <div class="comment-text">Meu marido voltou a trabalhar depois de fazer a oração 7 dias seguidos! Deus é fiel! 🏼</div>
+                    <div class="comment-actions">
+                        <span class="like-button" onclick="toggleLike(this)">Curtir</span>
+                        <span>Responder</span>
+                        <span class="like-count">
+                            <img src="./assets/images/geral/fblike.webp" alt="like">443
+                        </span>
+                        <span class="time-ago">21 h</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comentário da Luciana Silva -->
+            <div class="comment">
+                <div class="comment-avatar">
+                    <img class="lazyload" data-src="./assets/images/comentarios/luciana-silva.webp" alt="Luciana Silva" width="50" height="50">
+                </div>
+                <div class="comment-content">
+                    <div class="comment-author">Luciana Silva</div>
+                    <div class="comment-text">Tô arrepiada! Essa oraão das 3h é surreal 😳✨</div>
+                    <div class="comment-actions">
+                        <span class="like-button" onclick="toggleLike(this)">Curtir</span>
+                        <span>Responder</span>
+                        <span class="like-count">
+                            <img src="./assets/images/geral/fblike.webp" alt="like">256
+                        </span>
+                        <span class="time-ago">21 h</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comentário do Mateus Andrade -->
+            <div class="comment">
+                <div class="comment-avatar">
+                    <img class="lazyload" data-src="./assets/images/comentarios/mateus-andrade.webp" alt="Mateus Andrade" width="50" height="50">
+                </div>
+                <div class="comment-content">
+                    <div class="comment-author">Mateus Andrade</div>
+                    <div class="comment-text">3º dia de oraço e recebi uma notcia maravilhosa hoje 🙌</div>
+                    <div class="comment-actions">
+                        <span class="like-button" onclick="toggleLike(this)">Curtir</span>
+                        <span>Responder</span>
+                        <span class="like-count">
+                            <img src="./assets/images/geral/fblike.webp" alt="like">372
+                        </span>
+                        <span class="time-ago">21 h</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comentrio da Tânia Souza -->
+            <div class="comment">
+                <div class="comment-avatar">
+                    <img class="lazyload" data-src="./assets/images/comentarios/tania-souza.webp" alt="Tânia Souza" width="50" height="50">
+                </div>
+                <div class="comment-content">
+                    <div class="comment-author">Tânia Souza</div>
+                    <div class="comment-text">Tem algum mais acordando às 3h pra orar? Eu tô! </div>
+                    <div class="comment-actions">
+                        <span class="like-button" onclick="toggleLike(this)">Curtir</span>
+                        <span>Responder</span>
+                        <span class="like-count">
+                            <img src="./assets/images/geral/fblike.webp" alt="like">298
+                        </span>
+                        <span class="time-ago">21 h</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comentário do Roberto Menezes -->
+            <div class="comment">
+                <div class="comment-avatar">
+                    <img class="lazyload" data-src="./assets/images/comentarios/roberto-menezes.webp" alt="Roberto Menezes" width="50" height="50">
+                </div>
+                <div class="comment-content">
+                    <div class="comment-author">Roberto Menezes</div>
+                    <div class="comment-text">Ouvi dizer que o vídeo vai sair do ar logo! Assistam antes que tirem!! </div>
+                    <div class="comment-actions">
+                        <span class="like-button" onclick="toggleLike(this)">Curtir</span>
+                        <span>Responder</span>
+                        <span class="like-count">
+                            <img src="./assets/images/geral/fblike.webp" alt="like">431
+                        </span>
+                        <span class="time-ago">21 h</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comentrio da Rafaela Martins -->
+            <div class="comment">
+                <div class="comment-avatar">
+                    <img class="lazyload" data-src="./assets/images/comentarios/rafaela-martins.webp" alt="Rafaela Martins" width="50" height="50">
+                </div>
+                <div class="comment-content">
+                    <div class="comment-author">Rafaela Martins</div>
+                    <div class="comment-text">Confiei e hoje estou vivendo meu milagre! 🙏😭 Glória a Deus!</div>
+                    <div class="comment-actions">
+                        <span class="like-button" onclick="toggleLike(this)">Curtir</span>
+                        <span>Responder</span>
+                        <span class="like-count">
+                            <img src="./assets/images/geral/fblike.webp" alt="like">214
+                        </span>
+                        <span class="time-ago">21 h</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Comentrio do Ricardo Pereira -->
+            <div class="comment">
+                <div class="comment-avatar">
+                    <img class="lazyload" data-src="./assets/images/comentarios/ricardo-pereira.webp" alt="Ricardo Pereira" width="50" height="50">
+                </div>
+                <div class="comment-content">
+                    <div class="comment-author">Ricardo Pereira</div>
+                    <div class="comment-text">Senti meu anjo tocando minha cabeça na oração de ontem às 3h! Que loucura! 🙌</div>
+                    <div class="comment-actions">
+                        <span class="like-button" onclick="toggleLike(this)">Curtir</span>
+                        <span>Responder</span>
+                        <span class="like-count">
+                            <img src="./assets/images/geral/fblike.webp" alt="like">465
+                        </span>
+                        <span class="time-ago">21 h</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-text" style="font-size: 12px; color: #666;">
+                <a href="./pages/legal/termos-de-uso.html" style="color: #666; text-decoration: none;">Termos de Uso</a> | <a href="./pages/legal/politica-de-privacidade.html" style="color: #666; text-decoration: none;">Política de Privacidade</a>
+            </div>
+            <div class="footer-text" style="font-size: 12px; color: #666;">
+                Este site não é afiliado ao Facebook ou a qualquer entidade do Facebook. Depois que você sair do Facebook, a responsabilidade não é deles e sim do nosso site.
+            </div>
+            <div class="footer-text" style="font-size: 12px; color: #666;">
+                &copy; 2024 Quaresma do Padre Pio. Todos os direitos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Funão para curtir comentários
+        function toggleLike(button) {
+            button.classList.toggle('liked');
+            const likeCount = button.nextElementSibling.nextElementSibling;
+            const currentCount = parseInt(likeCount.textContent.replace(/\D/g, ''));
+            const isLiked = button.classList.contains('liked');
+            
+            if (isLiked) {
+                likeCount.innerHTML = `<img src="./assets/images/geral/fblike.webp" alt="like" width="16" height="16" loading="lazy" decoding="async">${(currentCount + 1).toLocaleString()}`;
+            } else {
+                likeCount.innerHTML = `<img src="./assets/images/geral/fblike.webp" alt="like" width="16" height="16" loading="lazy" decoding="async">${(currentCount - 1).toLocaleString()}`;
+            }
+        }
+
+        // Otimização de performance
+        document.addEventListener('DOMContentLoaded', function() {
+            // Carrega o script do LazySizes
+            const script = document.createElement('script');
+            script.src = 'https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.3.2/lazysizes.min.js';
+            document.body.appendChild(script);
+
+            // Adiciona classe lazyload a todas as imagens
+            const images = document.querySelectorAll('img');
+            images.forEach(img => {
+                if (!img.classList.contains('lazyload')) {
+                    img.classList.add('lazyload');
+                    // Adiciona data-src se não existir
+                    if (!img.hasAttribute('data-src')) {
+                        img.setAttribute('data-src', img.src);
+                    }
+                }
+            });
+        });
+    </script>
+
+    <script>
+        // ALTERE O LINK PARA A PÁGINA QUE QUISER MOSTRAR QUANDO O USUÁRIO TENTAR SAIR
+        const link = 'https://quaresmadepadrepio.com/original/pages/desconto-pv/';
+
+        function setBackRedirect(url) {
+            let urlBackRedirect = url;
+            urlBackRedirect = urlBackRedirect =
+                urlBackRedirect.trim() +
+                (urlBackRedirect.indexOf('?') > 0 ? '&' : '?') +
+                document.location.search.replace('?', '').toString();
+
+            history.pushState({}, '', location.href);
+            history.pushState({}, '', location.href);
+            history.pushState({}, '', location.href);
+
+            window.addEventListener('popstate', () => {
+                console.log('onpopstate', urlBackRedirect);
+                setTimeout(() => {
+                    location.href = urlBackRedirect;
+                }, 1);
+            });
+        }
+
+        setBackRedirect(link);
+    </script>
+
+    <div style="display:none">
+        <script id="_wauhgd">var _wau = _wau || []; _wau.push(["small", "48q7h0lkyr", "hgd"]);</script>
+        <script async src="//waust.at/s.js"></script>
+    </div>
+</body>
+</html> 
