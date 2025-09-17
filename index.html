@@ -28,30 +28,140 @@ VERSÃO: [VERSÃO]
     </noscript>
     
     <!-- ========================================================================== -->
-    <!-- TROCAR VDEO AQUI - SUBSTITUIR TODO O SCRIPT ABAIXO -->
-    <!-- ========================================================================== -->
-    <script type="text/javascript">
-        // CONFIGURAÇÃO DO VÍDEO PRINCIPAL
-        const VIDEO_ID      = 'vidAWcuodSAperc';
-        const CONTAINER_ID  = 'ctn_1753501662473';
-        const THUMB_URL     = `https://delivery.i-cdn.net/stream/${VIDEO_ID}/ThumbnailStart.jpg`;
-        const PLAYER_JS_URL = `https://delivery.i-cdn.net/stream/${VIDEO_ID}/player.js`;
-        
-        // Injeção imediata do preload (performance máxima)
-        let preloadLink = document.querySelector('link[rel="preload"][as="image"]');
-        if (!preloadLink) {
-          preloadLink = document.createElement('link');
-          preloadLink.rel         = 'preload';
-          preloadLink.as          = 'image';
-          preloadLink.crossOrigin = 'anonymous';
-          document.head.appendChild(preloadLink);
-        }
-        preloadLink.href = THUMB_URL;
-      </script>                   
-    <!-- ========================================================================== -->
-    <!-- FIM DA SEÇÃO DE TROCA DE VÍDEO -->
-    <!-- ========================================================================== -->
-    
+<!-- TROCAR VÍDEO AQUI - SUBSTITUIR TODO O SCRIPT ABAIXO -->
+<!-- ========================================================================== -->
+
+<div class="video-container" id="ctn_1753501662473">
+  <!-- Overlay (capa do vídeo) -->
+  <div class="video-overlay">
+    <img src="https://cdn.converteai.net/e1413a90-2dc0-4cee-bcb4-3bcda0aa539b/68cb3395151f30ecba563da7/ThumbnailStart.jpg" alt="Capa do vídeo">
+    <button class="play-button"></button>
+  </div>
+
+  <!-- Player de vídeo -->
+  <video id="video-player" class="video-player" playsinline></video>
+
+  <!-- Barrinha animada -->
+  <div class="video-progress-bar">
+    <div class="progress"></div>
+  </div>
+</div>
+
+<!-- HLS.js para compatibilidade com .m3u8 -->
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+
+<script>
+  const video = document.getElementById('video-player');
+  const overlay = document.querySelector('.video-overlay');
+  const playButton = document.querySelector('.play-button');
+  const progress = document.querySelector('.progress');
+
+  const videoSrc = 'https://cdn.converteai.net/e1413a90-2dc0-4cee-bcb4-3bcda0aa539b/68cb3395151f30ecba563da7/main.m3u8';
+
+  let fakeProgress = 0;       // Para animação da barrinha “mais rápida”
+  let progressInterval;
+
+  // Função para iniciar o vídeo
+  function startVideo() {
+    overlay.style.display = 'none';
+    video.style.display = 'block';
+
+    // Inicia o vídeo com HLS.js
+    if(Hls.isSupported()) {
+      const hls = new Hls();
+      hls.loadSource(videoSrc);
+      hls.attachMedia(video);
+      hls.on(Hls.Events.MANIFEST_PARSED,function() {
+        video.play();
+      });
+    } else if(video.canPlayType('application/vnd.apple.mpegurl')) {
+      video.src = videoSrc;
+      video.addEventListener('loadedmetadata',function() {
+        video.play();
+      });
+    }
+
+    // Barrinha animada “fake” enquanto o vídeo carrega / começa
+    progressInterval = setInterval(() => {
+      fakeProgress += Math.random() * 1.2; // Aceleração variável
+      if(fakeProgress >= 100) fakeProgress = 100;
+      progress.style.width = fakeProgress + '%';
+    }, 50);
+  }
+
+  // Quando o vídeo realmente começar, sincroniza a barrinha com o tempo real
+  video.addEventListener('timeupdate', () => {
+    const percent = (video.currentTime / video.duration) * 100;
+    progress.style.width = percent + '%';
+
+    if(percent >= 100) clearInterval(progressInterval);
+  });
+
+  playButton.addEventListener('click', startVideo);
+</script>
+
+<style>
+  .video-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .video-overlay img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .play-button {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: url('https://cdn.converteai.net/e1413a90-2dc0-4cee-bcb4-3bcda0aa539b/68cb3395151f30ecba563da7/play-button.png') no-repeat center center;
+    background-size: contain;
+    border: none;
+    cursor: pointer;
+  }
+
+  .video-player {
+    width: 100%;
+    height: auto;
+    display: none;
+  }
+
+  .video-progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    background: rgba(255,255,255,0.2);
+  }
+
+  .video-progress-bar .progress {
+    height: 100%;
+    width: 0;
+    background: #ffd700;
+    transition: width 0.1s linear;
+  }
+</style>
+
+<!-- ========================================================================== -->
+<!-- FIM DA SEÇÃO DE TROCA DE VÍDEO -->
+<!-- ========================================================================== -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Manuscrito Sagrado - Descoberta Religiosa" />
     <title>QUARESMA DO PADRE PIO</title>
