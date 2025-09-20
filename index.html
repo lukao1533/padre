@@ -193,29 +193,50 @@ VERSÃO: [VERSÃO]
             /* padding lateral aplicado */
         }
 
-     /* ===== CTA atrasada (pulsando) ===== */
-     .delayed-cta {
-        display: none;               /* aparece via JS */
-        margin: var(--space-4) auto 0;
-        width: 100%;
-        max-width: 720px;
-        text-align: center;
-      }
-      .delayed-cta a {
-        display: inline-block;
-        width: 100%;
-        max-width: 420px;
-        padding: 14px 18px;
-        font-weight: 800;
-        text-decoration: none;
-        color: #111;
-        background: #fcc02e;        /* cor solicitada */
-        border-radius: 999px;
-        box-shadow: 0 8px 18px rgba(252, 192, 46, 0.45);
-        transform: translateZ(0);
-        will-change: transform, box-shadow;
-        animation: pulse-cta 1.25s ease-in-out infinite;
-      }
+        /* ===== CTA atrasada (pulsando) ===== */
+        .delayed-cta {
+            display: none;
+            /* aparece via JS */
+            margin: var(--space-4) auto 0;
+            width: 100%;
+            max-width: 720px;
+            text-align: center;
+        }
+
+        .delayed-cta a {
+            display: inline-block;
+            width: 100%;
+            max-width: 420px;
+            padding: 14px 18px;
+            font-weight: 800;
+            text-decoration: none;
+            color: #111;
+            background: #fcc02e;
+            /* cor solicitada */
+            border-radius: 999px;
+            box-shadow: 0 8px 18px rgba(252, 192, 46, 0.45);
+            transform: translateZ(0);
+            will-change: transform, box-shadow;
+            animation: pulse-cta 1.25s ease-in-out infinite;
+        }
+
+        @keyframes pulse-cta {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 8px 18px rgba(252, 192, 46, 0.45)
+            }
+
+            50% {
+                transform: scale(1.035);
+                box-shadow: 0 12px 26px rgba(252, 192, 46, 0.6)
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 8px 18px rgba(252, 192, 46, 0.45)
+            }
+        }
+
         /* Headline */
         .headline {
             padding: var(--space-3) 0 var(--space-3);
@@ -534,10 +555,10 @@ VERSÃO: [VERSÃO]
             </script>
         </div>
 
-          <!-- CTA atrasada abaixo da VSL -->
-      <div id="delayed-cta" class="delayed-cta" aria-live="polite">
-        <a id="delayed-cta-link" href="https://go.tribopay.com.br/kstr3bv3le" rel="noopener" target="_blank">QUERO ESSA BENÇÃO</a>
-      </div>
+        <!-- CTA atrasada abaixo da VSL -->
+        <div id="delayed-cta" class="delayed-cta" aria-live="polite">
+            <a id="delayed-cta-link" href="https://go.tribopay.com.br/kstr3bv3le" rel="noopener" target="_blank">QUERO ESSA BENÇÃO</a>
+        </div>
 
         <div class="imagem-video-container">
             <img class="lazyload" data-src="https://quaresmadepadrepio.com/original/assets/images/geral/imgvideo.webp"
@@ -991,39 +1012,24 @@ VERSÃO: [VERSÃO]
     </script>
 
 
-    <!-- CTA atrasada: exibe 18 minutos após o carregamento da página -->
+    <!-- CTA atrasada: exibe 25 minutos após o carregamento da página (sem alterar links do checkout) -->
     <script>
         (function setupDelayedCTA() {
-          // 18 minutos em ms
-          var DELAY_MS = 25 * 60 * 1000; // 1.080.000ms
-  
+          // 25 minutos em ms
+          var DELAY_MS = 22 * 60 * 1000; // 1.500.000 ms
+
           function showCTA() {
             var ctaWrap = document.getElementById('delayed-cta');
-            var ctaLink = document.getElementById('delayed-cta-link');
-  
-            if (!ctaWrap || !ctaLink) return;
-  
-            // Usa o link global se existir; fallback para '#'
-            var target = (typeof link !== 'undefined' && link) ? link : '#';
-  
-            // Preserva UTMs atuais ao navegar
-            try {
-              var url = new URL(target, window.location.href);
-              var currentParams = new URLSearchParams(window.location.search);
-              currentParams.forEach(function (v, k) {
-                if (!url.searchParams.has(k)) url.searchParams.set(k, v);
-              });
-              target = url.toString();
-            } catch (e) {
-              // mantém target como está em caso de URL inválida
-            }
-  
-            ctaLink.setAttribute('href', target);
+            if (!ctaWrap) { console.warn('[CTA] #delayed-cta não encontrado'); return; }
+
+            // NÃO alteramos o href do botão para preservar exatamente o link do checkout definido no HTML.
             ctaWrap.style.display = 'block';
+            console.log('[CTA] exibida após 25 minutos');
           }
-  
-          // Dispara após load para garantir que 'link' possa ter sido definido por outros scripts
+
+          // Dispara após load
           window.addEventListener('load', function () {
+            console.log('[CTA] Timer agendado para 25 minutos…');
             setTimeout(showCTA, DELAY_MS);
           });
         })();
